@@ -8,12 +8,12 @@ const itemRouter = require("./item/item.router");
 // Porta do servidor
 const port = process.env.PORT || 3000;
 
-async function main() {               
+async function main() {
   // Cria o servidor `express`
   const app = express();
 
   // Middlewares
-  app.use(cors());                                                                                                                                                                                  
+  app.use(cors());
   app.use(express.json());
 
   // Rota principal
