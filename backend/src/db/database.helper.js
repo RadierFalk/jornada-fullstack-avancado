@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const databaseUrl = "";
+const databaseUrl = "mongodb://localhost:27017/jornada-fullstack-avancado";
 
 const connectToDataBase = () => {
   return mongoose
@@ -17,4 +17,5 @@ const isObjectIdValid = (id) => {
 
 module.exports = {
   isObjectIdValid,
+  connectToDataBase,
 };

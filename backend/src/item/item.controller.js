@@ -1,8 +1,8 @@
 const service = require("./item.service");
 const { isObjectIdValid } = require("../db/database.helper");
 
-const findAll = (req, res) => {
-  const itens = service.findAll();
+const findAll = async (req, res) => {
+  const itens = await service.findAll();
   res.send(itens);
 };
 

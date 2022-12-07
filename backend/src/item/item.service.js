@@ -4,6 +4,6 @@ const findAll = () => {
   return Item.find();
 };
 
-module.exprots = {
+module.exports = {
   findAll,
 };

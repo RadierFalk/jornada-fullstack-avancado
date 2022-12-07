@@ -1,6 +1,7 @@
 // Imports
 const express = require("express");
 const cors = require("cors");
+const { connectToDataBase } = require("./db/database.helper");
 
 // Imports dos Routers
 const itemRouter = require("./item/item.router");
@@ -9,7 +10,8 @@ const itemRouter = require("./item/item.router");
 const port = process.env.PORT || 3000;
 
 async function main() {
-  // Cria o servidor `express`
+  await connectToDataBase();
+
   const app = express();
 
   // Middlewares
