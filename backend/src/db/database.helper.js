@@ -1,7 +1,15 @@
-const isObjectIdValid = (id) => {
-    return true;
+const mongoose = require("mongoose");
+
+const databaseUrl = "";
+
+const connectToDataBase = () => {
+  return mongoose.connect(databaseUrl);
 };
 
-module.exports ={
-    isObjectIdValid,
-}
+const isObjectIdValid = (id) => {
+  return true;
+};
+
+module.exports = {
+  isObjectIdValid,
+};

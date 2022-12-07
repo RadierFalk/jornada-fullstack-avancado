@@ -9,3 +9,7 @@ const itemSchema = new mongoose.Schema({
     ref: "Category",
   },
 });
+
+const Item = mongoose.model("Item", itemSchema);
+
+module.exports = Item;

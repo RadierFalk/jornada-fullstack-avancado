@@ -1,5 +1,7 @@
+const Item = require("./item.model");
+
 const findAll = () => {
-  return ClipboardItem.find();
+  return Item.find();
 };
 
 module.exprots = {
