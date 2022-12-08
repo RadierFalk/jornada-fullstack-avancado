@@ -18,10 +18,15 @@ const update = (id, item) => {
   const ObjectId = new ObjectId(id);
   return Item.findByIdAndUpdate(ObjectId, item);
 };
+const deleteById = (id) => {
+  const ObjectId = new ObjectId(id);
+  return Item.findByIdAndDelete(ObjectId);
+};
 
 module.exports = {
   findAll,
   findById,
   create,
   update,
+  deleteById,
 };
