@@ -14,8 +14,14 @@ const create = (item) => {
   return Item.create(item);
 };
 
+const update = (id, item) => {
+  const ObjectId = new ObjectId(id);
+  return Item.findByIdAndUpdate(ObjectId, item);
+};
+
 module.exports = {
   findAll,
   findById,
   create,
+  update,
 };
