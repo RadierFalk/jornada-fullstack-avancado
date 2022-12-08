@@ -6,14 +6,14 @@ const findAll = async (req, res) => {
   res.send(itens);
 };
 
-const findById = (req, res) => {
+const findById = async (req, res) => {
   const id = req.params.id;
 
   if (!isObjectIdValid(id)) {
     return res.status(400).send({ message: "ID inválido!" });
   }
 
-  const item = {};
+  const item = await service.findById(id);
 
   if (!item) {
     return res.status(404).send({ message: "ID não encontrado!" });
