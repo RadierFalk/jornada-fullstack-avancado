@@ -5,7 +5,7 @@ const { connectToDataBase } = require("./db/database.helper");
 
 // Imports dos Routers
 const itemRouter = require("./item/item.router");
-
+const categoryRouter = require("./category.router/");
 // Porta do servidor
 const port = process.env.PORT || 3000;
 
@@ -25,6 +25,7 @@ async function main() {
 
   // Inicialização dos `Routers`
   app.use("/item", itemRouter);
+  app.use("/category", categoryRouter);
 
   // Inicia o servidor
   app.listen(port, () => {
